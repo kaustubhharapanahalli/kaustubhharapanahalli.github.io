@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import Blogs from "./components/Blogs"; // Import your Blogs component
-import Home from "./components/Home";
+import Home from "./components/Homepage";
 import NavBar from "./components/Navbar";
 import Projects from "./components/Projects"; // Import your Projects component
 import Publications from "./components/Publications"; // Import your Publications component
