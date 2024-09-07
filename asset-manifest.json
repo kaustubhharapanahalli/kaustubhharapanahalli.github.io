@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/kaustubhharapanahalli/kaustubhharapanahalli.github.io.git/static/css/main.d84f6dc1.css",
-    "main.js": "/kaustubhharapanahalli/kaustubhharapanahalli.github.io.git/static/js/main.7d09e053.js",
-    "static/js/453.4a91d8c7.chunk.js": "/kaustubhharapanahalli/kaustubhharapanahalli.github.io.git/static/js/453.4a91d8c7.chunk.js",
-    "static/media/profile_image.png": "/kaustubhharapanahalli/kaustubhharapanahalli.github.io.git/static/media/profile_image.95209d5816d7e954b181.png",
-    "static/media/resume.pdf": "/kaustubhharapanahalli/kaustubhharapanahalli.github.io.git/static/media/resume.7d568e5c99fb9f656ae7.pdf",
-    "static/media/github.png": "/kaustubhharapanahalli/kaustubhharapanahalli.github.io.git/static/media/github.f11021803f68852df283.png",
-    "index.html": "/kaustubhharapanahalli/kaustubhharapanahalli.github.io.git/index.html",
-    "static/media/logo.svg": "/kaustubhharapanahalli/kaustubhharapanahalli.github.io.git/static/media/logo.546c632e56c75ae1f4abc42a976c610e.svg",
-    "static/media/googlescholar.svg": "/kaustubhharapanahalli/kaustubhharapanahalli.github.io.git/static/media/googlescholar.32276c550f6724cc4c78821cfb91ba06.svg",
-    "main.d84f6dc1.css.map": "/kaustubhharapanahalli/kaustubhharapanahalli.github.io.git/static/css/main.d84f6dc1.css.map",
-    "main.7d09e053.js.map": "/kaustubhharapanahalli/kaustubhharapanahalli.github.io.git/static/js/main.7d09e053.js.map",
-    "453.4a91d8c7.chunk.js.map": "/kaustubhharapanahalli/kaustubhharapanahalli.github.io.git/static/js/453.4a91d8c7.chunk.js.map"
+    "main.css": "/kaustubhharapanahalli.github.io.git/static/css/main.d84f6dc1.css",
+    "main.js": "/kaustubhharapanahalli.github.io.git/static/js/main.e6162f8e.js",
+    "static/js/453.4a91d8c7.chunk.js": "/kaustubhharapanahalli.github.io.git/static/js/453.4a91d8c7.chunk.js",
+    "static/media/profile_image.png": "/kaustubhharapanahalli.github.io.git/static/media/profile_image.95209d5816d7e954b181.png",
+    "static/media/resume.pdf": "/kaustubhharapanahalli.github.io.git/static/media/resume.7d568e5c99fb9f656ae7.pdf",
+    "static/media/github.png": "/kaustubhharapanahalli.github.io.git/static/media/github.f11021803f68852df283.png",
+    "index.html": "/kaustubhharapanahalli.github.io.git/index.html",
+    "static/media/logo.svg": "/kaustubhharapanahalli.github.io.git/static/media/logo.546c632e56c75ae1f4abc42a976c610e.svg",
+    "static/media/googlescholar.svg": "/kaustubhharapanahalli.github.io.git/static/media/googlescholar.32276c550f6724cc4c78821cfb91ba06.svg",
+    "main.d84f6dc1.css.map": "/kaustubhharapanahalli.github.io.git/static/css/main.d84f6dc1.css.map",
+    "main.e6162f8e.js.map": "/kaustubhharapanahalli.github.io.git/static/js/main.e6162f8e.js.map",
+    "453.4a91d8c7.chunk.js.map": "/kaustubhharapanahalli.github.io.git/static/js/453.4a91d8c7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d84f6dc1.css",
-    "static/js/main.7d09e053.js"
+    "static/js/main.e6162f8e.js"
   ]
 }
