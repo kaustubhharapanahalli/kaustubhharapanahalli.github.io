@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, HashRouter as Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Blogs from "./components/Blogs"; // Import your Blogs component
 import Home from "./components/Homepage";
 import NavBar from "./components/Navbar";
@@ -9,18 +9,16 @@ import Resume from "./components/Resume"; // Import your Resume component
 
 function App() {
   return (
-    <Router>
-      <div>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/publications" element={<Publications />} />
-          <Route path="/resume" element={<Resume />} />
-        </Routes>
-      </div>
-    </Router>
+    <div>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/publications" element={<Publications />} />
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
+    </div>
   );
 }
 

@@ -1,16 +1,17 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import React from "react";
 import "react-bootstrap";
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom/client";
+import { HashRouter as Router } from "react-router-dom";
+import App from "./App";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <Router>
     <App />
-  </React.StrictMode>
+  </Router>
 );
 
 // If you want to start measuring performance in your app, pass a function
