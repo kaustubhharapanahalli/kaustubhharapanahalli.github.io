@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import resumePDF from "../Assets/files/resume.pdf"; // Import your resume PDF file
 import githubIcon from "../Assets/images/github.png"; // Import GitHub icon
@@ -11,24 +11,6 @@ const Home = () => {
   const imageRef = useRef(null); // Reference to the image element
 
   // Function to set the width of the image dynamically
-  useEffect(() => {
-    const updateImageWidth = () => {
-      if (imageRef.current) {
-        setImageWidth(imageRef.current.offsetWidth);
-      }
-    };
-
-    // Set initial width
-    updateImageWidth();
-
-    // Listen to window resize to update width dynamically
-    window.addEventListener("resize", updateImageWidth);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", updateImageWidth);
-    };
-  }, []);
 
   return (
     <section className="home-section">
@@ -127,7 +109,7 @@ const Home = () => {
               <Button
                 className="mt-3"
                 style={{
-                  width: imageWidth ? `${imageWidth}px` : "100%", // Dynamically set button width
+                  width: "317px", // Dynamically set button width
                   backgroundColor: "#D9D9D9", // Button color
                   border: "none", // Remove button border
                   padding: "10px 20px", // Add padding for a larger button feel
