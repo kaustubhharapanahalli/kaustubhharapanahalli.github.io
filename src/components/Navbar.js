@@ -3,15 +3,16 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 import "../App.css";
-import logo from "../Assets/images/logo.svg";
 
-function NavBar() {
+// Update logo import to use process.env.PUBLIC_URL
+const NavBar = () => {
   return (
     <Navbar sticky="top" expand="lg" className="custom-navbar">
       <Container>
         <Navbar.Brand as={Link} to="/">
           <img
-            src={logo}
+            // Use process.env.PUBLIC_URL for the logo path
+            src={`${process.env.PUBLIC_URL}/Assets/images/logo.svg`}
             alt="logo"
             width="30"
             height="30"
@@ -42,6 +43,6 @@ function NavBar() {
       </Container>
     </Navbar>
   );
-}
+};
 
 export default NavBar;

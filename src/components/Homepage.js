@@ -1,16 +1,22 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import resumePDF from "../Assets/files/resume.pdf"; // Import your resume PDF file
-import githubIcon from "../Assets/images/github.png"; // Import GitHub icon
-import scholarIcon from "../Assets/images/googlescholar.svg"; // Import Google Scholar icon
-import linkedinIcon from "../Assets/images/linkedin.png"; // Import LinkedIn icon
-import profileImage from "../Assets/images/profile_image.png"; // Import the image
 
 const Home = () => {
-  const [imageWidth, setImageWidth] = useState(null); // State to store image width
-  const imageRef = useRef(null); // Reference to the image element
+  const [imageWidth, setImageWidth] = useState(null);
+  const imageRef = useRef(null);
 
-  // Function to set the width of the image dynamically
+  useEffect(() => {
+    const updateImageWidth = () => {
+      if (imageRef.current) {
+        setImageWidth(imageRef.current.offsetWidth);
+      }
+    };
+    updateImageWidth();
+    window.addEventListener("resize", updateImageWidth);
+    return () => {
+      window.removeEventListener("resize", updateImageWidth);
+    };
+  }, []);
 
   return (
     <section className="home-section">
@@ -46,24 +52,21 @@ const Home = () => {
                 completed my undergraduate degree from Visvesvaraya
                 Technological University, India.
               </p>
+              {/* More content */}
             </div>
           </Col>
-
-          {/* Empty Column for Spacing */}
           <Col md={1} />
-
-          {/* Column for Profile Image */}
           <Col md={4} className="text-end">
             <img
-              ref={imageRef} // Attach the ref to the image element
-              src={profileImage}
+              ref={imageRef}
+              src={`${process.env.PUBLIC_URL}/Assets/images/profile_image.png`}
               alt="Kaustubh Harapanahalli"
               className="img-fluid"
             />
             <div
               className="email-box mt-3"
               style={{
-                width: imageWidth ? `${imageWidth}px` : "100%", // Dynamically set width
+                width: imageWidth ? `${imageWidth}px` : "100%",
               }}
             >
               <p>Ira A. Fulton School of Engineering</p>
@@ -76,14 +79,22 @@ const Home = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={githubIcon} alt="GitHub" className="icon" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/Assets/images/github.png`}
+                    alt="GitHub"
+                    className="icon"
+                  />
                 </a>
                 <a
                   href="https://linkedin.com/in/kmhalli"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <img src={linkedinIcon} alt="LinkedIn" className="icon" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}/Assets/images/linkedin.png`}
+                    alt="LinkedIn"
+                    className="icon"
+                  />
                 </a>
                 <a
                   href="https://scholar.google.com/citations?user=51Dqq8kAAAAJ&hl=en"
@@ -91,17 +102,15 @@ const Home = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src={scholarIcon}
+                    src={`${process.env.PUBLIC_URL}/Assets/images/googlescholar.svg`}
                     alt="Google Scholar"
                     className="icon"
                   />
                 </a>
               </div>
             </div>
-
-            {/* Download Resume Button */}
             <a
-              href={resumePDF} // Link to the resume PDF
+              href={`${process.env.PUBLIC_URL}/Assets/files/resume.pdf`}
               download="Kaustubh_Harapanahalli_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -109,11 +118,11 @@ const Home = () => {
               <Button
                 className="mt-3"
                 style={{
-                  width: "317px", // Dynamically set button width
-                  backgroundColor: "#D9D9D9", // Button color
-                  border: "none", // Remove button border
-                  padding: "10px 20px", // Add padding for a larger button feel
-                  color: "#000", // Set text color to black for visibility
+                  width: imageWidth ? `${imageWidth}px` : "100%",
+                  backgroundColor: "#D9D9D9",
+                  border: "none",
+                  padding: "10px 20px",
+                  color: "#000",
                 }}
               >
                 Download Resume
