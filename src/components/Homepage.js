@@ -27,41 +27,9 @@ const Home = () => {
             <h1>Kaustubh Harapanahalli</h1>
           </Col>
         </Row>
+
         <Row>
-          <Col md={7}>
-            <div className="text-box">
-              <p className="mb-4">
-                As a Computer Science Master's Thesis Student at Arizona State
-                University, I am passionate about my research in computer
-                vision, machine learning, and artificial intelligence.
-              </p>
-              <p className="mb-4">
-                I address challenges at the intersection of transportation,
-                computer vision, autonomous vehicles, and intelligent traffic
-                management systems, working under the guidance of Dr. Aviral
-                Shrivastava. I am dedicated to researching novel ways to resolve
-                problems and making the research available as a solution to
-                consumers. Hence, I enjoy focusing on full-stack deep learning.
-                Currently, I am applying my work to transportation incident
-                management.
-              </p>
-              <p className="mb-4">
-                Due to my involvement in Machine Learning Accelerator Design,
-                MLIR-related topics, I have a decent understanding in the areas
-                of FPGAs, and MLIR, without technical coding expertise.
-              </p>
-              <p>
-                I worked at Siemens Technology as a Computer Vision Research
-                Intern during my Master's and, before that, full-time as a
-                Research Engineer at Siemens Technology and Services in India. I
-                completed my undergraduate degree from Visvesvaraya
-                Technological University, India.
-              </p>
-              {/* More content */}
-            </div>
-          </Col>
-          <Col md={1} />
-          <Col md={4} className="text-md-end text-center">
+          <Col md={4} className="text-md-end text-center order-md-last">
             <img
               ref={imageRef}
               src={`${process.env.PUBLIC_URL}/Assets/images/profile_image.png`}
@@ -115,19 +83,42 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button
-                className="mt-3"
-                style={{
-                  width: imageWidth ? `${imageWidth}px` : "100%",
-                  backgroundColor: "#D9D9D9",
-                  border: "none",
-                  padding: "10px 20px",
-                  color: "#000",
-                }}
-              >
-                Download Resume
-              </Button>
+              <Button className="mt-3 download-btn">Download Resume</Button>
             </a>
+          </Col>
+
+          {/* Text Content Column */}
+          <Col md={7}>
+            <div className="text-box">
+              <p className="mb-4">
+                As a Computer Science Master's Thesis Student at Arizona State
+                University, I am passionate about my research in computer
+                vision, machine learning, and artificial intelligence.
+              </p>
+              <p className="mb-4">
+                I address challenges at the intersection of transportation,
+                computer vision, autonomous vehicles, and intelligent traffic
+                management systems, working under the guidance of Dr. Aviral
+                Shrivastava. I am dedicated to researching novel ways to resolve
+                problems and making the research available as a solution to
+                consumers. Hence, I enjoy focusing on full-stack deep learning.
+                Currently, I am applying my work to transportation incident
+                management.
+              </p>
+              <p className="mb-4">
+                Due to my involvement in Machine Learning Accelerator Design,
+                MLIR-related topics, I have a decent understanding in the areas
+                of FPGAs, and MLIR, without technical coding expertise.
+              </p>
+              <p>
+                I worked at Siemens Technology as a Computer Vision Research
+                Intern during my Master's and, before that, full-time as a
+                Research Engineer at Siemens Technology and Services in India. I
+                completed my undergraduate degree from Visvesvaraya
+                Technological University, India.
+              </p>
+              {/* More content */}
+            </div>
           </Col>
         </Row>
       </Container>
