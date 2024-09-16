@@ -9,29 +9,33 @@
   .align-items-center {
     margin-top: 0.5rem !important; /* Further reduce the margin for mobile */
     padding-top: 0 !important; /* Ensure no padding is added above */
+    margin-left: 0.5rem;
   }
 
   .home-section .text-md-end {
     text-align: center !important;
   }
 
+  /* Mobile-specific styling for the email box */
   .email-box {
     text-align: center !important; /* Center-align for mobile view */
-    padding: 15px; /* Adjust padding for mobile */
-    margin: 0 auto; /* Center the email-box */
-    max-width: 90%; /* Ensure the email-box is responsive on mobile */
-    background-color: #e4e4e4; /* Keep background color intact */
-    border-radius: 2px; /* Rounded corners */
+    padding: 10px; /* Adjust padding for mobile */
+    margin: auto 25px; /* Center the email-box */
+    max-width: 100%; /* Full width for mobile */
+    background-color: #e4e4e4; /* Maintain background color */
+    border-radius: 2px; /* Maintain rounded corners */
   }
 
+  /* Mobile-specific styling for the download button */
   .download-btn {
-    width: 100%; /* Full width on mobile */
-    margin-top: 10px; /* Add margin to separate the button */
-    background-color: #d9d9d9; /* Keep background color intact */
+    width: 90%; /* Full width on mobile */
+    margin: 10px auto; /* Add margin between the button and content */
+    background-color: #d9d9d9; /* Keep background color */
     border: none;
-    padding: 10px 20px; /* Add padding for button */
-    color: #000; /* Button text color */
+    padding: 10px 15px; /* Adjust padding for mobile */
+    color: #000; /* Text color */
     text-align: center; /* Center text on button */
+    display: block; /* Ensure the button fills the width on mobile */
   }
 
   .social-icons a {
@@ -40,23 +44,23 @@
 
   /* Adding margin between the text-box and the download button */
   .text-box {
-    margin-bottom: 20px; /* Add space between the text content and button */
+    margin: 20px; /* Add space between text content and button */
   }
 }
 
 /* Tablet and Laptop view adjustments */
 @media (min-width: 769px) and (max-width: 991px) {
   .email-box {
-    text-align: center !important; /* Center-align for mobile view */
-    padding: 15px; /* Adjust padding for mobile */
+    text-align: center !important; /* Center-align for tablet view */
+    padding: 15px; /* Adjust padding for tablet */
     margin: 0 auto; /* Center the email-box */
-    max-width: 100%; /* Ensure the email-box is responsive on mobile */
+    max-width: 100%; /* Ensure the email-box is responsive on tablet */
     background-color: #e4e4e4; /* Keep background color intact */
     border-radius: 2px; /* Rounded corners */
   }
 
   .download-btn {
-    width: 100%; /* Full width on mobile */
+    width: 100%; /* Full width on tablet */
     margin-top: 10px; /* Add margin to separate the button */
     background-color: #d9d9d9; /* Keep background color intact */
     border: none;
