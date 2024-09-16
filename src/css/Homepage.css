@@ -1,12 +1,14 @@
 /* Reducing the space above the name row for both desktop and mobile */
 .align-items-center {
   margin-top: 1rem !important; /* Reduce the top margin for the name row */
+  padding-top: 0 !important; /* Ensure no padding is added above */
 }
 
 /* Mobile view adjustments */
 @media (max-width: 768px) {
   .align-items-center {
     margin-top: 0.5rem !important; /* Further reduce the margin for mobile */
+    padding-top: 0 !important; /* Ensure no padding is added above */
   }
 
   .home-section .text-md-end {
@@ -15,13 +17,21 @@
 
   .email-box {
     text-align: center !important; /* Center-align for mobile view */
-    padding: 10px;
-    margin: 0 auto; /* Center the email-box on mobile */
+    padding: 15px; /* Adjust padding for mobile */
+    margin: 0 auto; /* Center the email-box */
+    max-width: 90%; /* Ensure the email-box is responsive on mobile */
+    background-color: #e4e4e4; /* Keep background color intact */
+    border-radius: 2px; /* Rounded corners */
   }
 
   .download-btn {
-    width: 100%;
+    width: 100%; /* Full width on mobile */
     margin-top: 10px; /* Add margin to separate the button */
+    background-color: #d9d9d9; /* Keep background color intact */
+    border: none;
+    padding: 10px 20px; /* Add padding for button */
+    color: #000; /* Button text color */
+    text-align: center; /* Center text on button */
   }
 
   .social-icons a {
@@ -30,31 +40,68 @@
 
   /* Adding margin between the text-box and the download button */
   .text-box {
-    margin-top: 20px; /* Add space between the text content and button */
+    margin-bottom: 20px; /* Add space between the text content and button */
   }
 }
 
-/* Desktop styles */
-.email-box {
-  width: 100%;
-  text-align: right; /* Align right by default */
-  background-color: #e4e4e4; /* Same background as other text boxes */
-  padding: 20px; /* Add padding inside the box */
-  border-radius: 2px; /* Rounded corners */
-  max-width: 317px; /* Limit width to match the image */
-  margin-left: auto; /* Align the email box to the right */
+/* Tablet and Laptop view adjustments */
+@media (min-width: 769px) and (max-width: 991px) {
+  .email-box {
+    text-align: center !important; /* Center-align for mobile view */
+    padding: 15px; /* Adjust padding for mobile */
+    margin: 0 auto; /* Center the email-box */
+    max-width: 100%; /* Ensure the email-box is responsive on mobile */
+    background-color: #e4e4e4; /* Keep background color intact */
+    border-radius: 2px; /* Rounded corners */
+  }
+
+  .download-btn {
+    width: 100%; /* Full width on mobile */
+    margin-top: 10px; /* Add margin to separate the button */
+    background-color: #d9d9d9; /* Keep background color intact */
+    border: none;
+    padding: 10px 20px; /* Add padding for button */
+    color: #000; /* Button text color */
+    text-align: center; /* Center text on button */
+  }
+
+  .download-btn {
+    width: 100%; /* Full width on tablet */
+    margin-top: 10px;
+  }
 }
 
-.download-btn {
-  width: 100%;
-  background-color: #d9d9d9;
-  border: none;
-  padding: 10px 20px;
-  color: #000;
+/* Laptop and larger screens (min-width: 992px) */
+@media (min-width: 992px) {
+  .img-fluid {
+    width: 350px; /* Fix image width to 350px for laptop and larger screens */
+    height: auto;
+    border-radius: 2px;
+  }
+
+  .email-box {
+    width: 350px; /* Set a fixed width for the email box to match the image */
+    text-align: right; /* Align right for larger screens */
+    background-color: #e4e4e4;
+    padding: 20px;
+    border-radius: 2px;
+    margin-left: auto;
+  }
+
+  .download-btn {
+    width: 350px; /* Match the email-box width to the image and email-box */
+    background-color: #d9d9d9;
+    border: none;
+    padding: 10px 20px;
+    color: #000;
+    text-align: center;
+    margin-top: 10px; /* Add margin between the button and other content */
+  }
 }
 
 .home-section {
-  padding: 0;
+  padding: 0 !important; /* Remove padding from the section */
+  margin: 0 !important; /* Remove extra margin from the section */
 }
 
 .home-section h1 {
