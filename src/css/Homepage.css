@@ -1,12 +1,12 @@
-@media (max-width: 768px) {
-  /* Stack the image first on mobile, remove excess whitespace */
-  .align-items-center {
-    margin-top: 0 !important; /* Removes whitespace */
-  }
+/* Reducing the space above the name row for both desktop and mobile */
+.align-items-center {
+  margin-top: 1rem !important; /* Reduce the top margin for the name row */
+}
 
-  /* Ensure image appears first on mobile view */
-  .order-md-last {
-    order: -1;
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .align-items-center {
+    margin-top: 0.5rem !important; /* Further reduce the margin for mobile */
   }
 
   .home-section .text-md-end {
@@ -15,7 +15,7 @@
 
   .email-box {
     text-align: center !important; /* Center-align for mobile view */
-    padding: 10px; /* Add padding inside the box */
+    padding: 10px;
     margin: 0 auto; /* Center the email-box on mobile */
   }
 
@@ -27,8 +27,14 @@
   .social-icons a {
     margin: 0 10px;
   }
+
+  /* Adding margin between the text-box and the download button */
+  .text-box {
+    margin-top: 20px; /* Add space between the text content and button */
+  }
 }
 
+/* Desktop styles */
 .email-box {
   width: 100%;
   text-align: right; /* Align right by default */
@@ -64,10 +70,6 @@
   max-width: 100%;
   height: auto;
   border-radius: 2px;
-}
-
-.align-items-center {
-  margin-top: 3em;
 }
 
 .text-box {
