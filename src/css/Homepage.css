@@ -1,0 +1,101 @@
+@media (max-width: 768px) {
+  .home-section .text-md-end {
+    text-align: center !important;
+  }
+
+  .email-box {
+    text-align: center; /* Center-align for mobile view */
+    padding: 10px; /* Add padding inside the box */
+  }
+
+  .download-btn {
+    width: 100%;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+  }
+}
+
+.email-box {
+  width: 100%;
+  text-align: right; /* Align right by default */
+  background-color: #e4e4e4; /* Same background as other text boxes */
+  padding: 20px; /* Add padding inside the box */
+  border-radius: 2px; /* Rounded corners */
+  max-width: 317px; /* Limit width to match the image */
+  margin-left: auto; /* Align the email box to the right */
+}
+
+.download-btn {
+  width: 100%;
+  background-color: #d9d9d9;
+  border: none;
+  padding: 10px 20px;
+  color: #000;
+}
+
+.home-section {
+  padding: 0;
+}
+
+.home-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.home-section p {
+  font-size: 1.2rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.align-items-center {
+  margin-top: 3em;
+}
+
+.text-box {
+  background-color: #e4e4e4; /* Set background color */
+  padding: 20px; /* Add some padding */
+  border-radius: 2px; /* Optional: rounded corners */
+  width: fit-content; /* Ensure the box fits the content */
+  max-width: 100%; /* Prevents overflow on smaller screens */
+  text-align: left; /* Ensure the text is aligned to the left */
+}
+
+.text-box p {
+  margin: 0; /* Remove any default margin from the paragraph */
+  font-size: 1rem; /* Adjust font size if necessary */
+  line-height: 1.5; /* Ensure good readability */
+}
+
+.email-box p {
+  margin: 0; /* Remove any default margin from the paragraph */
+  font-size: 1rem; /* Adjust font size if necessary */
+  line-height: 1.5; /* Ensure good readability */
+  text-align: left; /* Ensure the text is aligned to the left */
+}
+
+.social-icons {
+  display: flex; /* Display icons in a row */
+  justify-content: flex-start; /* Align icons to the left */
+  gap: 10px; /* Space between icons */
+  margin-top: 10px;
+}
+
+.icon {
+  width: 24px; /* Set a consistent size for icons */
+  height: 24px; /* Set a consistent height for icons */
+}
+
+.mt-3 {
+  margin-top: 1rem; /* Add margin above the email box */
+}
+
+.mt-2 {
+  margin-top: 0.5rem; /* Add margin for icons */
+}
