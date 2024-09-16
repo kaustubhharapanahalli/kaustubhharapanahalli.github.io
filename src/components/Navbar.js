@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
-import "../App.css";
+import "../css/App.css";
 
 // Update logo import to use process.env.PUBLIC_URL
 const NavBar = () => {
