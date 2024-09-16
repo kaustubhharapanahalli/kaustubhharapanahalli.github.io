@@ -44,7 +44,11 @@ const Home = () => {
                 Currently, I am applying my work to transportation incident
                 management.
               </p>
-
+              <p className="mb-4">
+                Due to my involvement in Machine Learning Accelerator Design,
+                MLIR-related topics, I have a decent understanding in the areas
+                of FPGAs, and MLIR, without technical coding expertise.
+              </p>
               <p>
                 I worked at Siemens Technology as a Computer Vision Research
                 Intern during my Master's and, before that, full-time as a
