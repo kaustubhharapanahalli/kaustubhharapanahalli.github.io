@@ -4,37 +4,95 @@
   padding-top: 0 !important; /* Ensure no padding is added above */
 }
 
-/* Mobile view adjustments */
-@media (max-width: 768px) {
+a {
+  text-decoration: none; /* Remove underline */
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none; /* Ensure no underline on hover, focus, or click */
+}
+
+a.download-btn {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the text color from the button */
+}
+
+a.download-btn:hover,
+a.download-btn:active {
+  text-decoration: none; /* Ensure no underline on hover or active */
+  color: inherit; /* Ensure text color is inherited from the button */
+}
+
+/* Mobile and tablet portrait view adjustments */
+@media (max-width: 768px),
+  (min-width: 769px) and (max-width: 991px) and (orientation: portrait) {
+  a {
+    text-decoration: none; /* Remove underline */
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none; /* Ensure no underline on hover, focus, or click */
+  }
+
+  a.download-btn {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color from the button */
+  }
+
+  a.download-btn:hover,
+  a.download-btn:active {
+    text-decoration: none; /* Ensure no underline on hover or active */
+    color: inherit; /* Ensure text color is inherited from the button */
+  }
+
+  /* Targeting tablet portrait */
   .align-items-center {
-    margin-top: 0.5rem !important; /* Further reduce the margin for mobile */
+    margin-top: 0.5rem !important; /* Further reduce the margin for mobile and tablet portrait */
     padding-top: 0 !important; /* Ensure no padding is added above */
   }
 
   .home-section .text-md-end {
-    text-align: center !important; /* Center the image on mobile */
+    text-align: center !important; /* Center the image on mobile and tablet portrait */
   }
 
-  /* Mobile-specific styling for the email box */
+  /* Mobile and tablet portrait styling for the email box */
   .email-box {
-    text-align: center !important; /* Center-align for mobile view */
+    text-align: center !important; /* Center-align for mobile and tablet portrait */
     padding: 10px; /* Adjust padding for mobile */
     margin: auto 25px; /* Center the email-box */
-    max-width: 100%; /* Full width for mobile */
+    max-width: 100%; /* Full width for mobile and tablet portrait */
     background-color: #e4e4e4; /* Maintain background color */
     border-radius: 2px; /* Maintain rounded corners */
   }
 
-  /* Mobile-specific styling for the download button */
+  /* Mobile and tablet portrait styling for the download button */
   .download-btn {
-    width: 90%; /* Almost full width on mobile */
+    width: 90%; /* Almost full width on mobile and tablet portrait */
     margin: 10px auto; /* Center the button */
-    background-color: #d9d9d9; /* Keep background color */
+    background-color: #d9d9d9; /* Initial background color */
     border: none;
     padding: 10px 15px; /* Adjust padding for mobile */
-    color: #000; /* Button text color */
-    text-align: center; /* Center text on button */
+    color: #000; /* Initial text color */
+    text-align: center;
     display: block; /* Ensure the button fills the width on mobile */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  }
+
+  /* Hover state for mobile and tablet portrait */
+  .download-btn:hover {
+    background-color: #b3b3b3 !important; /* Slightly darker background on hover */
+    color: #000 !important; /* Keep text color black */
+    cursor: pointer;
+  }
+
+  /* Active state for mobile and tablet portrait */
+  .download-btn:active {
+    background-color: #8c8c8c !important; /* Even darker background when clicked */
+    color: #fff !important; /* Change text color to white */
   }
 
   .social-icons a {
@@ -47,30 +105,31 @@
   }
 }
 
-/* Tablet and Laptop view adjustments */
-@media (min-width: 769px) and (max-width: 991px) {
-  .email-box {
-    text-align: center !important; /* Center-align for tablet view */
-    padding: 15px; /* Adjust padding for tablet */
-    margin: 0 auto; /* Center the email-box */
-    max-width: 100%; /* Ensure the email-box is responsive on tablet */
-    background-color: #e4e4e4; /* Keep background color intact */
-    border-radius: 2px; /* Rounded corners */
+/* Tablet landscape view and larger screens (like laptops) */
+@media (min-width: 769px) and (max-width: 991px) and (orientation: landscape),
+  (min-width: 992px) {
+  a {
+    text-decoration: none; /* Remove underline */
   }
 
-  .download-btn {
-    width: 100%; /* Full width on tablet */
-    margin-top: 10px; /* Add margin to separate the button */
-    background-color: #d9d9d9; /* Keep background color intact */
-    border: none;
-    padding: 10px 20px; /* Add padding for button */
-    color: #000; /* Button text color */
-    text-align: center; /* Center text on button */
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none; /* Ensure no underline on hover, focus, or click */
   }
-}
 
-/* Laptop and larger screens (min-width: 992px) */
-@media (min-width: 992px) {
+  a.download-btn {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the text color from the button */
+  }
+
+  a.download-btn:hover,
+  a.download-btn:active {
+    text-decoration: none; /* Ensure no underline on hover or active */
+    color: inherit; /* Ensure text color is inherited from the button */
+  }
+
+  /* Targeting tablet landscape and laptops/desktops */
   .img-fluid {
     width: 350px; /* Fix image width to 350px for laptop and larger screens */
     height: auto;
@@ -80,7 +139,7 @@
   .email-box {
     max-width: 350px;
     width: 100%; /* Set a fixed width for the email box to match the image */
-    text-align: left; /* Align right for larger screens */
+    text-align: left; /* Align left for larger screens */
     background-color: #e4e4e4;
     padding: 20px;
     border-radius: 2px;
@@ -90,18 +149,34 @@
   .download-btn {
     max-width: 350px;
     width: 100%; /* Match the email-box width to the image and email-box */
-    background-color: #d9d9d9;
+    background-color: #d9d9d9; /* Initial background color */
     border: none;
     padding: 10px 20px;
-    color: #000;
+    color: #000; /* Initial text color */
     text-align: center;
     margin-top: 10px; /* Add margin between the button and other content */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+  }
+
+  /* Hover state for tablet landscape and larger screens */
+  .download-btn:hover {
+    background-color: #b3b3b3 !important; /* Slightly darker background on hover */
+    color: #000 !important; /* Keep text color black */
+    cursor: pointer;
+  }
+
+  /* Active state for tablet landscape and larger screens */
+  .download-btn:active {
+    background-color: #8c8c8c !important; /* Even darker background when clicked */
+    color: #fff !important; /* Change text color to white */
   }
 }
 
+/* General section styling */
 .home-section {
   padding: 0 !important; /* Remove padding from the section */
   margin: 0 !important; /* Remove extra margin from the section */
+  text-align: center; /* Center-align the section */
 }
 
 .home-section h1 {
