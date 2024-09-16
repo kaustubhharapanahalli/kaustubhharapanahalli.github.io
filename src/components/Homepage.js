@@ -106,6 +106,7 @@ const Home = () => {
               {/* More content */}
             </div>
           </Col>
+          <Col md={1}></Col>
         </Row>
       </Container>
     </section>
