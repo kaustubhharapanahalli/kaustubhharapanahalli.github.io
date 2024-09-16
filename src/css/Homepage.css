@@ -4,6 +4,7 @@
   padding-top: 0 !important; /* Ensure no padding is added above */
 }
 
+/* General styles for <a> tag to remove underline globally */
 a {
   text-decoration: none; /* Remove underline */
 }
@@ -28,27 +29,6 @@ a.download-btn:active {
 /* Mobile and tablet portrait view adjustments */
 @media (max-width: 768px),
   (min-width: 769px) and (max-width: 991px) and (orientation: portrait) {
-  a {
-    text-decoration: none; /* Remove underline */
-  }
-
-  a:hover,
-  a:focus,
-  a:active {
-    text-decoration: none; /* Ensure no underline on hover, focus, or click */
-  }
-
-  a.download-btn {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit the text color from the button */
-  }
-
-  a.download-btn:hover,
-  a.download-btn:active {
-    text-decoration: none; /* Ensure no underline on hover or active */
-    color: inherit; /* Ensure text color is inherited from the button */
-  }
-
   /* Targeting tablet portrait */
   .align-items-center {
     margin-top: 0.5rem !important; /* Further reduce the margin for mobile and tablet portrait */
@@ -108,27 +88,6 @@ a.download-btn:active {
 /* Tablet landscape view and larger screens (like laptops) */
 @media (min-width: 769px) and (max-width: 991px) and (orientation: landscape),
   (min-width: 992px) {
-  a {
-    text-decoration: none; /* Remove underline */
-  }
-
-  a:hover,
-  a:focus,
-  a:active {
-    text-decoration: none; /* Ensure no underline on hover, focus, or click */
-  }
-
-  a.download-btn {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit the text color from the button */
-  }
-
-  a.download-btn:hover,
-  a.download-btn:active {
-    text-decoration: none; /* Ensure no underline on hover or active */
-    color: inherit; /* Ensure text color is inherited from the button */
-  }
-
   /* Targeting tablet landscape and laptops/desktops */
   .img-fluid {
     width: 350px; /* Fix image width to 350px for laptop and larger screens */
