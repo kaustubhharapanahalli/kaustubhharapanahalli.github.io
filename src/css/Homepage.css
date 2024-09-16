@@ -9,11 +9,10 @@
   .align-items-center {
     margin-top: 0.5rem !important; /* Further reduce the margin for mobile */
     padding-top: 0 !important; /* Ensure no padding is added above */
-    margin-left: 0.5rem;
   }
 
   .home-section .text-md-end {
-    text-align: center !important;
+    text-align: center !important; /* Center the image on mobile */
   }
 
   /* Mobile-specific styling for the email box */
@@ -28,12 +27,12 @@
 
   /* Mobile-specific styling for the download button */
   .download-btn {
-    width: 90%; /* Full width on mobile */
-    margin: 10px auto; /* Add margin between the button and content */
+    width: 90%; /* Almost full width on mobile */
+    margin: 10px auto; /* Center the button */
     background-color: #d9d9d9; /* Keep background color */
     border: none;
     padding: 10px 15px; /* Adjust padding for mobile */
-    color: #000; /* Text color */
+    color: #000; /* Button text color */
     text-align: center; /* Center text on button */
     display: block; /* Ensure the button fills the width on mobile */
   }
@@ -68,11 +67,6 @@
     color: #000; /* Button text color */
     text-align: center; /* Center text on button */
   }
-
-  .download-btn {
-    width: 100%; /* Full width on tablet */
-    margin-top: 10px;
-  }
 }
 
 /* Laptop and larger screens (min-width: 992px) */
@@ -84,16 +78,18 @@
   }
 
   .email-box {
-    width: 350px; /* Set a fixed width for the email box to match the image */
-    text-align: right; /* Align right for larger screens */
+    max-width: 350px;
+    width: 100%; /* Set a fixed width for the email box to match the image */
+    text-align: left; /* Align right for larger screens */
     background-color: #e4e4e4;
     padding: 20px;
     border-radius: 2px;
-    margin-left: auto;
+    margin-left: auto; /* Align the email-box to the right */
   }
 
   .download-btn {
-    width: 350px; /* Match the email-box width to the image and email-box */
+    max-width: 350px;
+    width: 100%; /* Match the email-box width to the image and email-box */
     background-color: #d9d9d9;
     border: none;
     padding: 10px 20px;
