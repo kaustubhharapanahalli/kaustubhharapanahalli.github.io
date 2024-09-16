@@ -1,23 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "../css/Homepage.css"; // Assuming you'll add a custom CSS file for additional styling
 
 const Home = () => {
-  const [imageWidth, setImageWidth] = useState(null);
   const imageRef = useRef(null);
-
-  useEffect(() => {
-    const updateImageWidth = () => {
-      if (imageRef.current) {
-        setImageWidth(imageRef.current.offsetWidth);
-      }
-    };
-    updateImageWidth();
-    window.addEventListener("resize", updateImageWidth);
-    return () => {
-      window.removeEventListener("resize", updateImageWidth);
-    };
-  }, []);
 
   return (
     <section className="home-section">
