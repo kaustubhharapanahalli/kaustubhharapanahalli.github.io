@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
+import "../css/Homepage.css"; // Assuming you'll add a custom CSS file for additional styling
 
 const Home = () => {
   const [imageWidth, setImageWidth] = useState(null);
@@ -60,19 +61,14 @@ const Home = () => {
             </div>
           </Col>
           <Col md={1} />
-          <Col md={4} className="text-end">
+          <Col md={4} className="text-md-end text-center">
             <img
               ref={imageRef}
               src={`${process.env.PUBLIC_URL}/Assets/images/profile_image.png`}
               alt="Kaustubh Harapanahalli"
               className="img-fluid"
             />
-            <div
-              className="email-box mt-3"
-              style={{
-                width: imageWidth ? `${imageWidth}px` : "100%",
-              }}
-            >
+            <div className="email-box mt-3">
               <p>Ira A. Fulton School of Engineering</p>
               <p>MS Student</p>
               <p className="mb-4">Arizona State University</p>
