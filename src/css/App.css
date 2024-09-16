@@ -1,0 +1,21 @@
+.home-section {
+  text-align: center;
+  padding: 50px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.custom-navbar {
+  background-color: #ffffff;
+  margin-top: 2em;
+}
+
+.navbar-toggler {
+  border: none; /* Style the toggle button if needed */
+}
+
+.logo {
+  max-width: 100%; /* Ensures the logo is responsive */
+}
