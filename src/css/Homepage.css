@@ -1,15 +1,27 @@
 @media (max-width: 768px) {
+  /* Stack the image first on mobile, remove excess whitespace */
+  .align-items-center {
+    margin-top: 0 !important; /* Removes whitespace */
+  }
+
+  /* Ensure image appears first on mobile view */
+  .order-md-last {
+    order: -1;
+  }
+
   .home-section .text-md-end {
     text-align: center !important;
   }
 
   .email-box {
-    text-align: center; /* Center-align for mobile view */
+    text-align: center !important; /* Center-align for mobile view */
     padding: 10px; /* Add padding inside the box */
+    margin: 0 auto; /* Center the email-box on mobile */
   }
 
   .download-btn {
     width: 100%;
+    margin-top: 10px; /* Add margin to separate the button */
   }
 
   .social-icons a {
