@@ -5,6 +5,10 @@ import "../css/Homepage.css"; // Assuming you'll add a custom CSS file for addit
 const Home = () => {
   const imageRef = useRef(null);
 
+  const handleMouseUp = (e) => {
+    e.target.classList.remove("active"); // Remove the active class manually
+  };
+
   return (
     <section className="home-section">
       <Container>
@@ -69,7 +73,9 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="mt-3 download-btn">Download Resume</Button>
+              <Button className="mt-3 download-btn" onMouseUp={handleMouseUp}>
+                Download Resume
+              </Button>
             </a>
           </Col>
 
