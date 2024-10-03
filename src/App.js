@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Blogs from "./components/Blogs"; // Import your Blogs component
+import Footer from "./components/Footer"; // Adjust the path to where you create the Footer component
 import Home from "./components/Homepage";
 import NavBar from "./components/Navbar";
 import Projects from "./components/Projects"; // Import your Projects component
@@ -9,7 +10,7 @@ import Resume from "./components/Resume"; // Import your Resume component
 
 function App() {
   return (
-    <div>
+    <div className="app-container">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -18,6 +19,7 @@ function App() {
         <Route path="/publications" element={<Publications />} />
         <Route path="/resume" element={<Resume />} />
       </Routes>
+      <Footer />
     </div>
   );
 }
