@@ -1,0 +1,11 @@
+.footer {
+  text-align: center;
+  padding-bottom: 10px; /* Distance from the bottom of the page */
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem; /* Optional: smaller font size */
+  color: #333; /* Optional: dark gray text */
+}

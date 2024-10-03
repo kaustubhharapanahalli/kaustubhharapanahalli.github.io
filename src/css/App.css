@@ -19,3 +19,11 @@
 .logo {
   max-width: 100%; /* Ensures the logo is responsive */
 }
+
+/* Ensure that the entire app takes up at least the full height of the viewport */
+.app-container {
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  overflow: hidden; /* Prevents content from overflowing */
+}

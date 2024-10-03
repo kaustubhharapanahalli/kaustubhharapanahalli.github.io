@@ -153,6 +153,12 @@ a.download-btn:active {
   border-radius: 2px;
 }
 
+.img-arxiv {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
 .text-box {
   background-color: #e4e4e4; /* Set background color */
   padding: 20px; /* Add some padding */
@@ -182,6 +188,16 @@ a.download-btn:active {
   margin-top: 10px;
 }
 
+.updates-box {
+  margin: 20px auto;
+}
+
+.updates-box p {
+  margin: 0; /* Remove any default margin from the paragraph */
+  font-size: 1rem; /* Adjust font size if necessary */
+  line-height: 1.2; /* Ensure good readability */
+}
+
 .icon {
   width: 24px; /* Set a consistent size for icons */
   height: 24px; /* Set a consistent height for icons */
@@ -193,4 +209,80 @@ a.download-btn:active {
 
 .mt-2 {
   margin-top: 0.5rem; /* Add margin for icons */
+}
+
+.arxiv-btn:hover {
+  background-color: #cccccc; /* Slightly darker gray on hover */
+  cursor: pointer;
+}
+
+.github-btn:hover {
+  background-color: #cccccc; /* Slightly darker gray on hover */
+  cursor: pointer;
+}
+
+.github-btn img {
+  margin-right: 5px; /* Space between GitHub logo and text */
+}
+
+.github-btn span {
+  font-size: 12px;
+  color: #000; /* Black text */
+  font-weight: bold;
+}
+
+.paper-buttons {
+  display: flex; /* Ensures horizontal alignment of buttons */
+  gap: 10px; /* Adds space between the buttons */
+  justify-content: flex-start; /* Aligns buttons to the left, change to center if needed */
+  align-items: center; /* Vertically centers buttons */
+}
+
+.arxiv-btn,
+.github-btn {
+  margin-top: 10px; /* Add margin above the buttons */
+  width: 72px; /* Set a fixed width for the buttons */
+  height: 24px; /* Set a fixed height for the buttons */
+  border-radius: 15px; /* Adds rounded corners to the buttons */
+  background-color: #e0e0e0; /* Sets the initial background color */
+  display: flex; /* Ensures button content is displayed in a row */
+  justify-content: center; /* Centers button content horizontally */
+  align-items: center; /* Centers button content vertically */
+  padding: 0; /* Removes any unnecessary padding */
+  border: none; /* Removes default button borders */
+  transition: background-color 0.3s ease; /* Adds a smooth transition effect */
+}
+
+/* Styles for IncidentNet hyperlink */
+.paper-link {
+  color: #333; /* Your website's primary color for links (adjust if needed) */
+  text-decoration: none; /* Remove the underline by default */
+  font-weight: bold; /* Make the link text bold */
+  border-bottom: 2px solid transparent; /* Add a subtle bottom border */
+  transition: color 0.3s ease, border-bottom 0.3s ease; /* Smooth transitions */
+}
+
+.paper-link:hover {
+  color: #000; /* Slightly darker shade on hover */
+  border-bottom: 2px solid #000; /* Show underline on hover with your website's color */
+}
+
+.paper-title {
+  font-size: 1.2rem; /* Adjust title size as needed */
+  font-weight: bold; /* Make it bold */
+  margin-bottom: 5px; /* Add a bit of space after the title */
+}
+
+.authors {
+  font-size: 1rem; /* Standard font size for authors */
+  margin-top: 10px !important; /* Add margin above the authors, with higher priority */
+  margin-bottom: 5px; /* Add space between authors and footnote */
+}
+
+.footnote {
+  display: block; /* Forces the small tag to appear on a new line */
+  font-size: 0.8rem; /* Adjust font size if necessary */
+  font-style: italic; /* Italicize the footnote */
+  color: #666; /* Lighter color for a subtle look */
+  margin-top: 5px; /* Add a little space between the authors and the footnote */
 }
