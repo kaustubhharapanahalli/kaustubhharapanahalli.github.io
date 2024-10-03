@@ -29,12 +29,12 @@ const NavBar = () => {
             <Nav.Link as={Link} to="/blogs" className="ms-2">
               Blogs
             </Nav.Link>
-            <Nav.Link as={Link} to="/projects" className="ms-2">
+            {/* <Nav.Link as={Link} to="/projects" className="ms-2">
               Projects
-            </Nav.Link>
-            <Nav.Link as={Link} to="/publications" className="ms-2">
+            </Nav.Link> */}
+            {/* <Nav.Link as={Link} to="/publications" className="ms-2">
               Publications
-            </Nav.Link>
+            </Nav.Link> */}
             <Nav.Link as={Link} to="/resume" className="ms-2">
               Resume
             </Nav.Link>
