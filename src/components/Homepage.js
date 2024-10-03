@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
-import "../css/Homepage.css"; // Assuming you'll add a custom CSS file for additional styling
+import "../css/Homepage.css";
+import ArxivButton from "./ArxivButton";
+import GithubButton from "./GithubButton";
 
 const Home = () => {
   const imageRef = useRef(null);
@@ -97,11 +99,6 @@ const Home = () => {
                 Currently, I am applying my work to transportation incident
                 management.
               </p>
-              <p className="mb-4">
-                Due to my involvement in Machine Learning Accelerator Design,
-                MLIR-related topics, I have a decent understanding in the areas
-                of FPGAs, and MLIR, without technical coding expertise.
-              </p>
               <p>
                 I worked at Siemens Technology as a Computer Vision Research
                 Intern during my Master's and, before that, full-time as a
@@ -109,7 +106,77 @@ const Home = () => {
                 completed my undergraduate degree from Visvesvaraya
                 Technological University, India.
               </p>
-              {/* More content */}
+            </div>
+            <div>
+              <h3 className="text-start updates-box">
+                <strong>Updates</strong>
+                <Row>
+                  <Col md={2}>
+                    <p> July 2024 </p>
+                  </Col>
+                  <Col md={10}>
+                    <p>
+                      Our paper from MPS Lab at ASU called{" "}
+                      <a
+                        href="https://www.arxiv.org/abs/2408.00996"
+                        target="_blank"
+                        className="paper-link"
+                      >
+                        IncidentNet
+                      </a>{" "}
+                      is accepted to IEEE International Conference of
+                      Intelligent Transportation Systems (ITSC) 2024
+                    </p>
+                  </Col>
+                </Row>
+              </h3>
+            </div>
+            <div>
+              <h3 className="text-start updates-box">
+                <strong>Publications</strong>
+                <Row>
+                  <Col md={4}>
+                    <p>
+                      {" "}
+                      <a
+                        href="https://www.arxiv.org/abs/2408.00996"
+                        target="_blank"
+                      >
+                        <img
+                          ref={imageRef}
+                          src={`${process.env.PUBLIC_URL}/Assets/images/incidentnet.png`}
+                          alt="IncidentNet architecture diagram"
+                          className="img-fluid"
+                        />
+                      </a>{" "}
+                    </p>
+                  </Col>
+                  <Col md={8}>
+                    <p className="paper-title">
+                      <a
+                        href="https://www.arxiv.org/abs/2408.00996"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="paper-link"
+                      >
+                        IncidentNet: Traffic Incident Detection, Localization
+                        and Severity Estimation with Sparse Sensing
+                      </a>
+                    </p>
+                    <p className="authors">
+                      Sai Shashank Peddiraju<sup>*</sup>, Kaustubh Harapanahalli
+                      <sup>*</sup>, Edward Andert and Aviral Shrivastava
+                      <small className="footnote">
+                        <sup>*</sup> - shared first authors
+                      </small>
+                    </p>
+                    <p className="paper-buttons">
+                      <ArxivButton link="https://www.arxiv.org/abs/2408.00996" />
+                      <GithubButton link="https://github.com/MPSLab-ASU/IncidentNet" />
+                    </p>
+                  </Col>
+                </Row>
+              </h3>
             </div>
           </Col>
           <Col md={1}></Col>
