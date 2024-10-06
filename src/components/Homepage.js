@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "../css/Homepage.css";
-import ArxivButton from "./ArxivButton";
-import GithubButton from "./GithubButton";
-import SlidesButton from "./SlidesButton";
+import ArxivButton from "./homepage/ArxivButton";
+import GithubButton from "./homepage/GithubButton";
+import SlidesButton from "./homepage/SlidesButton";
 
 const Home = () => {
   const imageRef = useRef(null);

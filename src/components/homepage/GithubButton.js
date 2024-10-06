@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import "../css/Homepage.css"; // Ensure this file contains the updated styles
+import "../../css/Homepage.css"; // Ensure this file contains the updated styles
 
 const GithubButton = ({ link }) => {
   return (

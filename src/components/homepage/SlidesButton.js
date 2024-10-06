@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Homepage.css"; // Ensure this CSS file contains the updated styles
+import "../../css/Homepage.css"; // Ensure this CSS file contains the updated styles
 
 const SlidesButton = ({ link }) => {
   return (
