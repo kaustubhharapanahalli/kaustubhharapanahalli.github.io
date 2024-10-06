@@ -1,6 +1,6 @@
 /* Reducing the space above the name row for both desktop and mobile */
 .align-items-center {
-  margin-top: 1rem !important; /* Reduce the top margin for the name row */
+  margin-top: 0.9rem !important; /* Reduce the top margin for the name row */
   padding-top: 0 !important; /* Ensure no padding is added above */
 }
 
@@ -144,7 +144,7 @@ a.download-btn:active {
 }
 
 .home-section p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-align: left;
   padding: 0;
   margin: 0;
@@ -173,13 +173,13 @@ a.download-btn:active {
 
 .text-box p {
   margin: 0; /* Remove any default margin from the paragraph */
-  font-size: 1rem; /* Adjust font size if necessary */
+  font-size: 0.9rem; /* Adjust font size if necessary */
   line-height: 1.5; /* Ensure good readability */
 }
 
 .email-box p {
   margin: 0; /* Remove any default margin from the paragraph */
-  font-size: 1rem; /* Adjust font size if necessary */
+  font-size: 0.9rem; /* Adjust font size if necessary */
   line-height: 1.5; /* Ensure good readability */
   text-align: left; /* Ensure the text is aligned to the left */
 }
@@ -200,12 +200,12 @@ a.download-btn:active {
 
 .updates-box p {
   margin: 0; /* Remove any default margin from the paragraph */
-  font-size: 1rem; /* Adjust font size if necessary */
+  font-size: 0.9rem; /* Adjust font size if necessary */
   line-height: 1.2; /* Ensure good readability */
 }
 
 .updates-text {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .icon {
@@ -214,7 +214,7 @@ a.download-btn:active {
 }
 
 .mt-3 {
-  margin-top: 1rem; /* Add margin above the email box */
+  margin-top: 0.9rem; /* Add margin above the email box */
 }
 
 .mt-2 {
@@ -282,14 +282,14 @@ a.download-btn:active {
 }
 
 .authors {
-  font-size: 1rem; /* Standard font size for authors */
+  font-size: 0.9rem; /* Standard font size for authors */
   margin-top: 10px !important; /* Add margin above the authors, with higher priority */
   margin-bottom: 5px; /* Add space between authors and footnote */
 }
 
 .footnote {
   display: block; /* Forces the small tag to appear on a new line */
-  font-size: 0.8rem; /* Adjust font size if necessary */
+  font-size: 0.9rem; /* Adjust font size if necessary */
   font-style: italic; /* Italicize the footnote */
   color: #666; /* Lighter color for a subtle look */
   margin-top: 5px; /* Add a little space between the authors and the footnote */
