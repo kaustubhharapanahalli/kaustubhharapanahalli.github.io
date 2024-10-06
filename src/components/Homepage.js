@@ -1,14 +1,29 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import "../css/Homepage.css";
 import ArxivButton from "./ArxivButton";
 import GithubButton from "./GithubButton";
+import SlidesButton from "./SlidesButton";
 
 const Home = () => {
   const imageRef = useRef(null);
 
   const handleMouseUp = (e) => {
     e.target.classList.remove("active"); // Remove the active class manually
+  };
+
+  const [copySuccess, setCopySuccess] = useState(false);
+  const email = "kharapan [at] asu [dot] edu";
+
+  const handleCopyEmail = () => {
+    // Copy the email text to the clipboard
+    navigator.clipboard.writeText(
+      email.replace(" [at] ", "@").replace(" [dot] ", ".")
+    );
+    setCopySuccess(true);
+
+    // Reset after a short delay
+    setTimeout(() => setCopySuccess(false), 500);
   };
 
   return (
@@ -32,7 +47,27 @@ const Home = () => {
               <p>Ira A. Fulton School of Engineering</p>
               <p>MS Student</p>
               <p className="mb-4">Arizona State University</p>
-              <p>Email: kharapan [at] asu [dot] edu</p>
+              <p>
+                Email:{" "}
+                <a
+                  href="mailto:kharapan@asu.edu"
+                  className="email-link paper-link"
+                >
+                  kharapan [at] asu [dot] edu
+                </a>
+                <div className="copy-btn-wrapper">
+                  <button className="copy-btn" onClick={handleCopyEmail}>
+                    <img
+                      src={`${process.env.PUBLIC_URL}/Assets/images/copy.png`}
+                      alt="Copy email"
+                      className="copy-icon"
+                    />
+                  </button>
+                  {copySuccess && (
+                    <div className="copy-success-popup">Copied!</div>
+                  )}
+                </div>
+              </p>
               <div className="social-icons mt-2">
                 <a
                   href="https://github.com/kaustubhharapanahalli"
@@ -109,74 +144,77 @@ const Home = () => {
             </div>
             <div>
               <h3 className="text-start updates-box">
-                <strong>Updates</strong>
-                <Row>
-                  <Col md={2}>
-                    <p> July 2024 </p>
-                  </Col>
-                  <Col md={10}>
-                    <p>
-                      Our paper from MPS Lab at ASU called{" "}
-                      <a
-                        href="https://www.arxiv.org/abs/2408.00996"
-                        target="_blank"
-                        className="paper-link"
-                      >
-                        IncidentNet
-                      </a>{" "}
-                      is accepted to IEEE International Conference of
-                      Intelligent Transportation Systems (ITSC) 2024
-                    </p>
-                  </Col>
-                </Row>
+                <strong className="updates-section">Updates</strong>
               </h3>
+              <Row>
+                <Col md={2}>
+                  <p> July 2024 </p>
+                </Col>
+                <Col md={10}>
+                  <p>
+                    Our paper from MPS Lab at ASU called{" "}
+                    <a
+                      href="https://www.arxiv.org/abs/2408.00996"
+                      target="_blank"
+                      className="paper-link"
+                    >
+                      IncidentNet
+                    </a>{" "}
+                    is accepted to IEEE International Conference of Intelligent
+                    Transportation Systems (ITSC) 2024
+                  </p>
+                </Col>
+              </Row>
             </div>
             <div>
               <h3 className="text-start updates-box">
                 <strong>Publications</strong>
-                <Row>
-                  <Col md={4}>
-                    <p>
-                      {" "}
-                      <a
-                        href="https://www.arxiv.org/abs/2408.00996"
-                        target="_blank"
-                      >
-                        <img
-                          ref={imageRef}
-                          src={`${process.env.PUBLIC_URL}/Assets/images/incidentnet.png`}
-                          alt="IncidentNet architecture diagram"
-                          className="img-fluid"
-                        />
-                      </a>{" "}
-                    </p>
-                  </Col>
-                  <Col md={8}>
-                    <p className="paper-title">
-                      <a
-                        href="https://www.arxiv.org/abs/2408.00996"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="paper-link"
-                      >
-                        IncidentNet: Traffic Incident Detection, Localization
-                        and Severity Estimation with Sparse Sensing
-                      </a>
-                    </p>
-                    <p className="authors">
-                      Sai Shashank Peddiraju<sup>*</sup>, Kaustubh Harapanahalli
-                      <sup>*</sup>, Edward Andert and Aviral Shrivastava
-                      <small className="footnote">
-                        <sup>*</sup> - shared first authors
-                      </small>
-                    </p>
-                    <p className="paper-buttons">
-                      <ArxivButton link="https://www.arxiv.org/abs/2408.00996" />
-                      <GithubButton link="https://github.com/MPSLab-ASU/IncidentNet" />
-                    </p>
-                  </Col>
-                </Row>
               </h3>
+              <Row>
+                <Col md={4}>
+                  <p>
+                    {" "}
+                    <a
+                      href="https://www.arxiv.org/abs/2408.00996"
+                      target="_blank"
+                    >
+                      <img
+                        ref={imageRef}
+                        src={`${process.env.PUBLIC_URL}/Assets/images/incidentnet.png`}
+                        alt="IncidentNet architecture diagram"
+                        className="img-fluid"
+                      />
+                    </a>{" "}
+                  </p>
+                </Col>
+                <Col md={8}>
+                  <p className="paper-title">
+                    <a
+                      href="https://www.arxiv.org/abs/2408.00996"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="paper-link"
+                    >
+                      IncidentNet: Traffic Incident Detection, Localization and
+                      Severity Estimation with Sparse Sensing
+                    </a>
+                  </p>
+                  <p className="authors">
+                    Sai Shashank Peddiraju<sup>*</sup>, Kaustubh Harapanahalli
+                    <sup>*</sup>, Edward Andert and Aviral Shrivastava
+                    <small className="footnote">
+                      <sup>*</sup> - shared first authors
+                    </small>
+                  </p>
+                  <p className="paper-buttons">
+                    <ArxivButton link="https://www.arxiv.org/abs/2408.00996" />
+                    <GithubButton link="https://github.com/MPSLab-ASU/IncidentNet" />
+                    <SlidesButton
+                      link={`${process.env.PUBLIC_URL}/Assets/files/IncidentNet.pdf`}
+                    />
+                  </p>
+                </Col>
+              </Row>
             </div>
           </Col>
           <Col md={1}></Col>

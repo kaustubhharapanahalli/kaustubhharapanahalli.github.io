@@ -144,7 +144,10 @@ a.download-btn:active {
 }
 
 .home-section p {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  text-align: left;
+  padding: 0;
+  margin: 0;
 }
 
 .img-fluid {
@@ -187,15 +190,22 @@ a.download-btn:active {
   gap: 10px; /* Space between icons */
   margin-top: 10px;
 }
+.updates-section {
+  margin-bottom: 30px;
+}
 
 .updates-box {
-  margin: 20px auto;
+  margin: 20px auto 10px auto;
 }
 
 .updates-box p {
   margin: 0; /* Remove any default margin from the paragraph */
   font-size: 1rem; /* Adjust font size if necessary */
   line-height: 1.2; /* Ensure good readability */
+}
+
+.updates-text {
+  font-size: 1rem;
 }
 
 .icon {
@@ -211,12 +221,9 @@ a.download-btn:active {
   margin-top: 0.5rem; /* Add margin for icons */
 }
 
-.arxiv-btn:hover {
-  background-color: #cccccc; /* Slightly darker gray on hover */
-  cursor: pointer;
-}
-
-.github-btn:hover {
+.arxiv-btn:hover,
+.github-btn:hover,
+.ppt-btn:hover {
   background-color: #cccccc; /* Slightly darker gray on hover */
   cursor: pointer;
 }
@@ -239,7 +246,8 @@ a.download-btn:active {
 }
 
 .arxiv-btn,
-.github-btn {
+.github-btn,
+.ppt-btn {
   margin-top: 10px; /* Add margin above the buttons */
   width: 72px; /* Set a fixed width for the buttons */
   height: 24px; /* Set a fixed height for the buttons */
@@ -285,4 +293,79 @@ a.download-btn:active {
   font-style: italic; /* Italicize the footnote */
   color: #666; /* Lighter color for a subtle look */
   margin-top: 5px; /* Add a little space between the authors and the footnote */
+}
+
+.ppt-btn img {
+  margin-right: 5px; /* Space between PowerPoint logo and text */
+}
+
+.ppt-btn span {
+  font-size: 12px;
+  color: #000; /* Black text */
+  font-weight: bold;
+}
+
+/* Email and Copy Button Container */
+.email-copy-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px; /* Space between email link and copy button */
+}
+
+/* Email link with same behavior as the paper-link */
+.email-link {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.email-link:hover {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+/* Copy button styling */
+.copy-btn {
+  background-color: transparent; /* No background for the button */
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 4px;
+}
+
+.copy-btn:hover .copy-icon {
+  opacity: 0.8; /* Slight opacity change on hover */
+}
+
+/* Styling for the copy icon */
+.copy-icon {
+  width: 16px; /* Adjust the size as needed */
+  height: 16px;
+  vertical-align: middle; /* Align the icon with the text */
+}
+
+.copy-btn span {
+  font-size: 12px;
+  color: green; /* Optional: color for "Copied!" message */
+  font-weight: bold;
+}
+
+.copy-btn-wrapper {
+  position: relative; /* Ensure the copy-success message is positioned relative to this container */
+  display: inline-block; /* Ensure proper inline layout */
+}
+
+.copy-success-popup {
+  position: absolute; /* Absolutely positioned relative to the copy-btn-wrapper */
+  top: -25px; /* Position the popup above the icon */
+  right: -40px; /* Position it to the right of the icon */
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 5px;
+  white-space: nowrap; /* Prevents text wrapping */
+  z-index: 10; /* Ensure it appears above other elements */
 }
