@@ -17,7 +17,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/publications" element={<Publications />} />
-        <Route path="/resume" element={<Resume />} />
+        <Route path="/portfolio" element={<Resume />} />
       </Routes>
       <Footer />
     </div>

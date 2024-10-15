@@ -35,9 +35,9 @@ const NavBar = () => {
             {/* <Nav.Link as={Link} to="/publications" className="ms-2">
               Publications
             </Nav.Link> */}
-            {/* <Nav.Link as={Link} to="/resume" className="ms-2">
-              Resume
-            </Nav.Link> */}
+            <Nav.Link as={Link} to="/portfolio" className="ms-2">
+              Portfolio
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
