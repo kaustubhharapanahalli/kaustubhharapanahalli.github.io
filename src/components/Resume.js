@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import "../css/Homepage.css";
 import "../css/Resume.css";
 
 const Resume = () => {
